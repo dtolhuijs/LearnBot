@@ -7,11 +7,11 @@
 #   Uncomment the ones you want to try and experiment with.
 #
 #   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
-
-module.exports = (robot) ->
-
-  robot.hear /badger/i, (msg) ->
-    msg.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
+#
+# module.exports = (robot) ->
+#
+#   robot.hear /badger/i, (msg) ->
+#     msg.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   #
   # robot.respond /open the (.*) doors/i, (msg) ->
   #   doorType = msg.match[1]
@@ -23,13 +23,13 @@ module.exports = (robot) ->
   # robot.hear /I like pie/i, (msg) ->
   #   msg.emote "makes a freshly baked pie"
   #
-  lulz = ['lol', 'rofl', 'lmao']
-
-  robot.respond /lulz/i, (msg) ->
-    msg.send msg.random lulz
+  # lulz = ['lol', 'rofl', 'lmao']
   #
-  robot.topic (msg) ->
-    msg.send "#{msg.message.text}? That's a Paddlin'"
+  # robot.respond /lulz/i, (msg) ->
+  #   msg.send msg.random lulz
+  # #
+  # robot.topic (msg) ->
+  #   msg.send "#{msg.message.text}? That's a Paddlin'"
   #
   #
   # enterReplies = ['Hi', 'Target Acquired', 'Firing', 'Hello friend.', 'Gotcha', 'I see you']
@@ -74,14 +74,14 @@ module.exports = (robot) ->
   #     msg.send "Not annoying you right now, am I?"
   #
   #
-  robot.router.post '/hubot/chatsecrets/:room', (req, res) ->
-    room   = req.params.room
-    data   = JSON.parse req.body.payload
-    secret = data.secret
-
-    robot.messageRoom room, "I have a secret: #{secret}"
-
-    res.send 'OK'
+  # robot.router.post '/hubot/chatsecrets/:room', (req, res) ->
+  #   room   = req.params.room
+  #   data   = JSON.parse req.body.payload
+  #   secret = data.secret
+  #
+  #   robot.messageRoom room, "I have a secret: #{secret}"
+  #
+  #   res.send 'OK'
 
   #
   # robot.error (err, msg) ->
